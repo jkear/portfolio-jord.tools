@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────
+   Design System Tokens — Aurora + Liquid Glass
+   ────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg: #060a12;
+  --bg-card: rgba(12, 18, 36, 0.45);
+  --bg-card-hover: rgba(12, 18, 36, 0.62);
+  --bg-nav: rgba(6, 10, 18, 0.82);
+
+  /* Borders */
+  --border: rgba(148, 163, 184, 0.13);
+  --border-hover: rgba(148, 163, 184, 0.28);
+
+  /* Brand */
+  --primary: #94caff;
+  --primary-glow: rgba(148, 202, 255, 0.2);
+  --green: #22c55e;
+  --green-dim: rgba(34, 197, 94, 0.12);
+  --amber: #fbbf24;
+  --purple: #a78bfa;
+
+  /* Aurora Palette */
+  --aurora-teal: rgba(0, 210, 170, 0.2);
+  --aurora-blue: rgba(40, 100, 255, 0.18);
+  --aurora-violet: rgba(130, 50, 250, 0.16);
+  --aurora-magenta: rgba(220, 50, 210, 0.12);
+  --aurora-cyan: rgba(0, 200, 255, 0.13);
+
+  /* Text */
+  --text: #f0f4fc;
+  --text-muted: rgba(220, 228, 242, 0.62);
+  --text-subtle: rgba(220, 228, 242, 0.35);
+
+  /* Effects */
+  --blur: 16px;
+  --blur-strong: 32px;
+  --radius: 1.125rem;
+  --radius-sm: 0.625rem;
+  --morph-duration: 500ms;
+}
+
+/* ──────────────── Tailwind Font Theme ──────────────── */
+@theme {
+  --font-family-heading: var(--font-heading), 'Archivo', system-ui, sans-serif;
+  --font-family-body: var(--font-body), 'Space Grotesk', system-ui, sans-serif;
+}
+
+/* ──────────────── Base ──────────────── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body, 'Space Grotesk', system-ui, sans-serif);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading, 'Archivo', system-ui, sans-serif);
+    line-height: 1.12;
+  }
+
+  ::selection {
+    background: rgba(0, 210, 170, 0.22);
+    color: var(--text);
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.2);
+    border-radius: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ──────────────── Utilities ──────────────── */
+@layer utilities {
+  .glass {
+    background: var(--bg-card);
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+    border: 1px solid var(--border);
+  }
+
+  .glass-strong {
+    background: rgba(6, 10, 18, 0.75);
+    backdrop-filter: blur(var(--blur-strong));
+    -webkit-backdrop-filter: blur(var(--blur-strong));
+    border: 1px solid var(--border);
+  }
+
+  .glass-nav {
+    background: var(--bg-nav);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.09);
+  }
+
+  .glow-card {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.04),
+      0 4px 28px rgba(0, 0, 0, 0.4),
+      0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .glow-card-hover {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 8px 44px rgba(0, 0, 0, 0.48),
+      0 2px 6px rgba(0, 0, 0, 0.55);
+  }
+
+  /* Aurora text gradient */
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      #00dcc0 0%,
+      #94caff 38%,
+      #c084fc 72%,
+      #f472b6 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* ──────────────── Aurora Layer Animations ──────────────── */
+
+/* Slow drift for each aurora layer — independent timing */
+@keyframes aurora-a {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.85; }
+  35%       { transform: translate(30px, -20px) scale(1.06); opacity: 1; }
+  70%       { transform: translate(-18px, 14px) scale(0.97); opacity: 0.9; }
+}
+@keyframes aurora-b {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.9; }
+  25%       { transform: translate(-25px, 22px) scale(1.07); opacity: 1; }
+  75%       { transform: translate(20px, -28px) scale(0.94); opacity: 0.8; }
+}
+@keyframes aurora-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(22px, 30px) scale(1.09); }
+}
+@keyframes aurora-d {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+  40%       { transform: translate(-30px, -18px) scale(1.08); opacity: 1; }
+  80%       { transform: translate(18px, 22px) scale(0.96); opacity: 0.75; }
+}
+
+/* Hue-shift for the shimmer layer */
+@keyframes aurora-hue {
+  0%, 100% { filter: hue-rotate(0deg) brightness(1); }
+  50%       { filter: hue-rotate(32deg) brightness(1.12); }
+}
+
+.aurora-a { animation: aurora-a 24s ease-in-out infinite; }
+.aurora-b { animation: aurora-b 30s ease-in-out infinite; }
+.aurora-c { animation: aurora-c 38s ease-in-out infinite; }
+.aurora-d { animation: aurora-d 20s ease-in-out infinite; }
+.aurora-hue { animation: aurora-hue 14s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-a,
+  .aurora-b,
+  .aurora-c,
+  .aurora-d,
+  .aurora-hue {
+    animation: none !important;
+  }
+}
