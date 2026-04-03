@@ -5,32 +5,32 @@ import { motion } from 'framer-motion'
 const SKILLS = [
   {
     group: 'AI & Agents',
-    color: '#38bdf8',
+    color: '#0284C7',
     items: ['Claude API', 'LangGraph', 'LangChain', 'CrewAI', 'Langfuse'],
   },
   {
     group: 'MCP & Tooling',
-    color: '#a78bfa',
+    color: '#7C3AED',
     items: ['Model Context Protocol', 'FastAPI', 'ElevenLabs API', 'httpx', 'n8n'],
   },
   {
     group: 'Data & Graph',
-    color: '#34d399',
+    color: '#059669',
     items: ['Neo4j', 'pgvector', 'pandas', 'Cypher', 'KuzuDB'],
   },
   {
     group: 'Frontend',
-    color: '#94caff',
+    color: '#2563EB',
     items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
   },
   {
     group: 'Backend',
-    color: '#22c55e',
+    color: '#16A34A',
     items: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'SQLAlchemy'],
   },
   {
     group: 'Cloud & Infra',
-    color: '#f97316',
+    color: '#EA580C',
     items: ['Google Cloud Platform', 'Vertex AI', 'Docker', 'Kubernetes', 'n8n'],
   },
 ]
@@ -48,7 +48,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="py-24 px-6 border-t border-[rgba(148,163,184,0.08)]"
+      className="py-24 px-6 border-t border-[var(--border)]"
     >
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start">

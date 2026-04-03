@@ -33,12 +33,7 @@ export function Navigation() {
         <a href="#" className="font-heading font-bold text-lg tracking-tight cursor-pointer group">
           <span className="text-[var(--text)]">jord</span>
           <span
-            style={{
-              background: 'linear-gradient(90deg, #00dcc0, #94caff)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
+            style={{ color: 'var(--primary)' }}
           >
             .tools
           </span>

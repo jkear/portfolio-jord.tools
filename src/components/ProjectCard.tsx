@@ -26,18 +26,18 @@ const TAG_BG: Record<string, string> = {
 
 const STATUS_STYLES = {
   active: {
-    bg: 'rgba(34,197,94,0.12)',
-    text: '#22c55e',
+    bg: 'rgba(22,163,74,0.10)',
+    text: '#16A34A',
     label: 'Active',
   },
   wip: {
-    bg: 'rgba(251,191,36,0.12)',
-    text: '#fbbf24',
+    bg: 'rgba(217,119,6,0.10)',
+    text: '#D97706',
     label: 'In Progress',
   },
   stable: {
-    bg: 'rgba(148,163,184,0.1)',
-    text: 'rgba(226,232,240,0.5)',
+    bg: 'rgba(100,116,139,0.08)',
+    text: '#64748B',
     label: 'Stable',
   },
 }
@@ -111,9 +111,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             key={tag}
             className="text-[11px] px-2 py-0.5 rounded-md font-medium"
             style={{
-              background: TAG_BG[tag] ?? 'rgba(148,163,184,0.1)',
-              color: 'rgba(226,232,240,0.7)',
-              border: '1px solid rgba(148,163,184,0.1)',
+              background: 'rgba(0,0,0,0.04)',
+              color: 'var(--text-muted)',
+              border: '1px solid var(--border)',
             }}
           >
             {tag}
@@ -127,7 +127,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       </div>
 
       {/* Links */}
-      <div className="flex gap-4 pt-3.5 border-t border-[rgba(148,163,184,0.08)]">
+      <div className="flex gap-4 pt-3.5 border-t border-[var(--border)]">
         {project.github && (
           <a
             href={project.github}
@@ -154,13 +154,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         )}
       </div>
 
-      {/* Radial glow on hover */}
-      <div
-        className="absolute inset-0 rounded-[var(--radius)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-        style={{
-          background: `radial-gradient(circle at 50% -10%, ${project.accent}0a 0%, transparent 65%)`,
-        }}
-      />
     </motion.article>
   )
 }

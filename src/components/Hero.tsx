@@ -129,43 +129,12 @@ export function Hero() {
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.32, ease: [0.16, 1, 0.3, 1] }}
           >
-            {/* Glass card — matches site design system */}
-            <div className="relative rounded-[1.5rem] overflow-hidden glow-card">
-              {/* Backdrop glass layer */}
-              <div
-                className="absolute inset-0 rounded-[1.5rem]"
-                style={{
-                  background: 'rgba(12, 18, 36, 0.52)',
-                  backdropFilter: 'blur(20px)',
-                  WebkitBackdropFilter: 'blur(20px)',
-                }}
-              />
-              {/* Gradient border ring */}
-              <div
-                className="absolute inset-0 rounded-[1.5rem]"
-                style={{
-                  background:
-                    'linear-gradient(135deg, rgba(148,202,255,0.18) 0%, rgba(167,139,250,0.10) 50%, rgba(0,210,170,0.12) 100%)',
-                  padding: '1px',
-                  WebkitMask:
-                    'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                  WebkitMaskComposite: 'xor',
-                  maskComposite: 'exclude',
-                }}
-              />
-              {/* Top highlight stripe */}
-              <div
-                className="absolute inset-x-0 top-0 h-px"
-                style={{
-                  background:
-                    'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 40%, rgba(148,202,255,0.22) 60%, transparent 100%)',
-                }}
-              />
-
+            {/* Contact card */}
+            <div className="rounded-[var(--radius)] overflow-hidden bg-white border border-[var(--border)] glow-card">
               {/* Content */}
-              <div className="relative p-6">
+              <div className="p-6">
                 {/* Contact links */}
-                <div className="space-y-2 mb-5 pb-5 border-b border-[var(--border)]">
+                <div className="space-y-2 mb-5 pb-5 border-b border-[var(--border)] last:border-b-0">
                   {LINKS.map((link) => {
                     const Icon = link.icon
                     return (
@@ -174,22 +143,13 @@ export function Hero() {
                         href={link.href}
                         target={link.href.startsWith('mailto') ? undefined : '_blank'}
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 group"
-                        style={{
-                          background: 'rgba(255,255,255,0.03)',
-                        }}
-                        onMouseEnter={(e) => {
-                          ;(e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.07)'
-                        }}
-                        onMouseLeave={(e) => {
-                          ;(e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.03)'
-                        }}
+                        className="flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 group hover:bg-[rgba(0,0,0,0.04)]"
                       >
                         <div
                           className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                          style={{ background: `${link.color}18` }}
+                          style={{ background: 'rgba(37,99,235,0.08)' }}
                         >
-                          <Icon size={15} style={{ color: link.color }} strokeWidth={1.75} />
+                          <Icon size={15} style={{ color: 'var(--primary)' }} strokeWidth={1.75} />
                         </div>
                         <div className="min-w-0">
                           <div className="text-[13px] font-medium text-[var(--text)]">
