@@ -78,7 +78,7 @@ export function Hero() {
             <motion.div variants={item} className="mb-5">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass text-xs font-medium text-[var(--text-muted)]">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--green)] animate-pulse" />
-                Building software that works for people, not platforms
+                Taking on new projects
               </span>
             </motion.div>
 
@@ -87,9 +87,9 @@ export function Hero() {
               className="font-heading font-extrabold tracking-tight text-[var(--text)] mb-5"
               style={{ fontSize: 'clamp(2.8rem, 6vw, 4.5rem)' }}
             >
-              Built for
+              Agents and pipelines.
               <br />
-              <span className="text-gradient">people, not platforms.</span>
+              <span className="text-gradient">Built, not pitched.</span>
             </motion.h1>
 
             <motion.p
@@ -97,9 +97,9 @@ export function Hero() {
               className="text-lg text-[var(--text-muted)] mb-8 max-w-[480px]"
               style={{ lineHeight: '1.72' }}
             >
-              I build automations and tools that cut the fees people shouldn't
-              be paying, recover time lost to repetitive work, and keep humans
-              in the loop. The economy is built around people — software should be too.
+              Python and TypeScript. Agent frameworks, MCP servers, graph
+              databases. I came from sales ops — I know what a tool needs
+              to do before I build it.
             </motion.p>
 
             <motion.div variants={item} className="flex items-center gap-3 flex-wrap">

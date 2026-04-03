@@ -69,27 +69,22 @@ export function About() {
             >
               <p>
                 I came into tech through sales and revenue operations — five
-                years at a SaaS company where I managed inbound pipelines, ran
-                product demos, and eventually led our AI implementations. That
-                gave me a clear picture of how businesses work, and how often
-                they quietly extract more from people than they give back.
+                years at a SaaS company where I managed pipelines, ran demos,
+                and eventually led our AI implementations. That gave me a
+                working picture of what software is actually supposed to do,
+                which turns out to be harder to find than the ability to write it.
               </p>
               <p>
-                Now I build the other direction. Automations that cut fees
-                people shouldn't be paying, tools that recover time lost to
-                repetitive work, systems that connect what should have been
-                connected years ago. I'm not trying to automate roles away —
-                jobs exist because the economy is a system for people, not
-                for optimization metrics. AI is a better tool for making that
-                economy work the way it should.
+                Now I build AI agents, workflow automations, and the tooling
+                around them. Python and TypeScript mostly. I'm not trying to
+                replace anyone — I'm trying to get rid of the work that
+                shouldn't have been manual in the first place. There's a lot of it.
               </p>
               <p>
-                Most real problems live between the technical and the human
-                side. When something costs too much to run, takes too long,
-                or depends on data that exists but can't be reached — I can
-                build the fix and explain what it's actually doing. The stack
-                is whatever the problem needs: Python, TypeScript, agents,
-                graph databases.
+                Most real problems sit between the technical and the business
+                case. I can write the code and explain why it needs to exist.
+                That's a rarer combination than it should be, and it's the
+                main thing I bring.
               </p>
             </div>
           </motion.div>
