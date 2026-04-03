@@ -70,24 +70,26 @@ export function About() {
               <p>
                 I came into tech through sales and revenue operations — five
                 years at a SaaS company where I managed inbound pipelines, ran
-                product demos at conferences, and eventually led our AI
-                implementations for marketing and sales. That background taught
-                me how businesses actually work before I started writing code
-                for them.
+                product demos, and eventually led our AI implementations. That
+                gave me a clear picture of how businesses work, and how often
+                they quietly extract more from people than they give back.
               </p>
               <p>
-                Now I build web applications and workflow automations, mostly
-                with Python and TypeScript. I work with agent frameworks, graph
-                databases, and tools like the Model Context Protocol — and I
-                can put a React frontend in front of it when needed. I'm still
-                learning plenty, but I ship working software and I understand
-                the business problems behind it.
+                Now I build the other direction. Automations that cut fees
+                people shouldn't be paying, tools that recover time lost to
+                repetitive work, systems that connect what should have been
+                connected years ago. I'm not trying to automate roles away —
+                jobs exist because the economy is a system for people, not
+                for optimization metrics. AI is a better tool for making that
+                economy work the way it should.
               </p>
               <p>
-                When a client needs a lead pipeline automated or an internal
-                tool built, I can speak both languages — the technical
-                requirements and the business case. That's the part of my
-                background I find most useful.
+                Most real problems live between the technical and the human
+                side. When something costs too much to run, takes too long,
+                or depends on data that exists but can't be reached — I can
+                build the fix and explain what it's actually doing. The stack
+                is whatever the problem needs: Python, TypeScript, agents,
+                graph databases.
               </p>
             </div>
           </motion.div>
