@@ -130,11 +130,11 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.32, ease: [0.16, 1, 0.3, 1] }}
           >
             {/* Contact card */}
-            <div className="rounded-[var(--radius)] overflow-hidden bg-white border border-[var(--border)] glow-card">
+            <div className="rounded-[var(--radius)] overflow-hidden glass glow-card">
               {/* Content */}
               <div className="p-6">
                 {/* Contact links */}
-                <div className="space-y-2 mb-5 pb-5 border-b border-[var(--border)] last:border-b-0">
+                <div className="space-y-2 mb-5 pb-5 border-b border-[var(--border)]">
                   {LINKS.map((link) => {
                     const Icon = link.icon
                     return (
@@ -143,11 +143,14 @@ export function Hero() {
                         href={link.href}
                         target={link.href.startsWith('mailto') ? undefined : '_blank'}
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 group hover:bg-[rgba(0,0,0,0.04)]"
+                        className="flex items-center gap-3 px-3 py-2.5 rounded-[var(--radius-sm)] transition-all duration-200 group"
+                        style={{ ['--hover-bg' as string]: 'var(--bg-hover)' }}
+                        onMouseEnter={e => (e.currentTarget.style.background = 'var(--bg-hover)')}
+                        onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
                       >
                         <div
                           className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                          style={{ background: 'rgba(37,99,235,0.08)' }}
+                          style={{ background: 'var(--bg-accent-subtle)' }}
                         >
                           <Icon size={15} style={{ color: 'var(--primary)' }} strokeWidth={1.75} />
                         </div>

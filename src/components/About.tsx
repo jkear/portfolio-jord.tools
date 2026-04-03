@@ -5,32 +5,32 @@ import { motion } from 'framer-motion'
 const SKILLS = [
   {
     group: 'AI & Agents',
-    color: '#0284C7',
+    color: '#38bdf8',
     items: ['Claude API', 'LangGraph', 'LangChain', 'CrewAI', 'Langfuse'],
   },
   {
     group: 'MCP & Tooling',
-    color: '#7C3AED',
+    color: '#a78bfa',
     items: ['Model Context Protocol', 'FastAPI', 'ElevenLabs API', 'httpx', 'n8n'],
   },
   {
     group: 'Data & Graph',
-    color: '#059669',
+    color: '#34d399',
     items: ['Neo4j', 'pgvector', 'pandas', 'Cypher', 'KuzuDB'],
   },
   {
     group: 'Frontend',
-    color: '#2563EB',
+    color: '#00D2A0',
     items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
   },
   {
     group: 'Backend',
-    color: '#16A34A',
+    color: '#22c55e',
     items: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'SQLAlchemy'],
   },
   {
     group: 'Cloud & Infra',
-    color: '#EA580C',
+    color: '#f97316',
     items: ['Google Cloud Platform', 'Vertex AI', 'Docker', 'Kubernetes', 'n8n'],
   },
 ]

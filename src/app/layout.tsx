@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Archivo, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { Background } from '@/components/Background'
+import { ThemeProvider } from '@/components/ThemeProvider'
+import { DPad } from '@/components/DPad'
 
 const archivo = Archivo({
   subsets: ['latin'],
@@ -24,8 +26,7 @@ export const metadata: Metadata = {
   keywords: ['portfolio', 'developer', 'AI agents', 'MCP', 'Next.js', 'Python', 'Swift'],
   openGraph: {
     title: 'jord.tools — Developer & Builder',
-    description:
-      'AI agents, MCP servers, graph databases, and full-stack web.',
+    description: 'AI agents, MCP servers, graph databases, and full-stack web.',
     type: 'website',
   },
 }
@@ -41,9 +42,20 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${archivo.variable} ${spaceGrotesk.variable}`}
     >
+      <head>
+        {/* Anti-FOUC: apply saved theme before paint */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('portfolio-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}`,
+          }}
+        />
+      </head>
       <body className="font-body">
-        <Background />
-        {children}
+        <ThemeProvider>
+          <Background />
+          {children}
+          <DPad />
+        </ThemeProvider>
       </body>
     </html>
   )

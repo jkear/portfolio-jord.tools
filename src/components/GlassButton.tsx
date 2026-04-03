@@ -16,23 +16,24 @@ interface GlassButtonProps {
 
 const VARIANT_STYLES: Record<Variant, string> = {
   primary: [
-    'bg-[var(--primary)] border border-[var(--primary)]',
-    'text-white',
-    'hover:bg-blue-700 hover:border-blue-700',
-    'shadow-sm',
+    'bg-[#00D2A0] border border-[#00D2A0]',
+    'text-black font-semibold',
+    'hover:bg-[#00BD8F] hover:border-[#00BD8F]',
+    'shadow-[0_2px_12px_rgba(0,210,160,0.20)]',
+    'hover:shadow-[0_4px_20px_rgba(0,210,160,0.28)]',
   ].join(' '),
 
   ghost: [
-    'bg-transparent border border-[var(--border)]',
+    'bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.10)]',
     'text-[var(--text-muted)]',
-    'hover:bg-[rgba(0,0,0,0.04)] hover:border-[var(--border-hover)]',
+    'hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.18)]',
     'hover:text-[var(--text)]',
   ].join(' '),
 
   icon: [
-    'bg-transparent border border-[var(--border)]',
+    'bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.10)]',
     'text-[var(--text-muted)]',
-    'hover:bg-[rgba(0,0,0,0.04)] hover:border-[var(--border-hover)]',
+    'hover:bg-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.18)]',
     'hover:text-[var(--primary)]',
   ].join(' '),
 }

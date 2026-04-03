@@ -26,18 +26,18 @@ const TAG_BG: Record<string, string> = {
 
 const STATUS_STYLES = {
   active: {
-    bg: 'rgba(22,163,74,0.10)',
-    text: '#16A34A',
+    bg: 'var(--status-active-bg)',
+    text: 'var(--status-active-text)',
     label: 'Active',
   },
   wip: {
-    bg: 'rgba(217,119,6,0.10)',
+    bg: 'rgba(251,191,36,0.12)',
     text: '#D97706',
     label: 'In Progress',
   },
   stable: {
-    bg: 'rgba(100,116,139,0.08)',
-    text: '#64748B',
+    bg: 'var(--status-stable-bg)',
+    text: 'var(--status-stable-text)',
     label: 'Stable',
   },
 }
@@ -56,7 +56,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, delay: index * 0.045, ease: [0.16, 1, 0.3, 1] }}
       className="group relative glass rounded-[var(--radius)] p-5 glow-card
-                 hover:border-[var(--border-hover)] hover:glow-card-hover
+                 hover:border-[var(--border-hover)] hover:glow-card-hover hover:-translate-y-0.5
                  transition-all duration-300 cursor-default flex flex-col h-full"
     >
       {/* Accent line along top */}
@@ -109,11 +109,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         {project.tags.slice(0, 4).map((tag) => (
           <span
             key={tag}
-            className="text-[11px] px-2 py-0.5 rounded-md font-medium"
+            className="proj-tag text-[11px] px-2 py-0.5 rounded-md font-medium"
             style={{
-              background: 'rgba(0,0,0,0.04)',
-              color: 'var(--text-muted)',
-              border: '1px solid var(--border)',
+              background: TAG_BG[tag] ?? 'rgba(148,163,184,0.1)',
+              color: 'var(--tag-text)',
+              border: '1px solid rgba(148,163,184,0.1)',
             }}
           >
             {tag}
