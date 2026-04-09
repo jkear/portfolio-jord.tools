@@ -8,6 +8,7 @@ import { GlassButton } from './GlassButton'
 const NAV_LINKS = [
   { href: '#projects', label: 'Projects' },
   { href: '#about', label: 'About' },
+  { href: 'https://stack.jord.tools', label: '♪ All My Favorite Things', external: true },
 ]
 
 export function Navigation() {
@@ -44,6 +45,7 @@ export function Navigation() {
             <a
               key={link.href}
               href={link.href}
+              {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               className="text-sm font-medium text-[var(--text-muted)] hover:text-[var(--text)] transition-colors duration-200 cursor-pointer"
             >
               {link.label}
