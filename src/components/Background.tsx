@@ -29,10 +29,24 @@ export function Background() {
     )
   }
 
-  if (theme === 'contrast') {
+  if (theme === 'anthropic') {
     return (
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute inset-0 bg-black" />
+        <div className="absolute inset-0" style={{ background: '#1F1F1E' }} />
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+            backgroundSize: '256px',
+          }}
+        />
+        <div
+          className="aurora-a absolute"
+          style={{
+            top: '-8%', left: '-6%', width: '68vw', height: '65vh', borderRadius: '50%',
+            background: 'radial-gradient(ellipse 55% 50% at 30% 35%, rgba(203,123,93,0.08) 0%, rgba(203,123,93,0.03) 45%, transparent 72%)',
+          }}
+        />
       </div>
     )
   }
