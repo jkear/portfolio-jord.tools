@@ -25,22 +25,34 @@ export const CATEGORIES: { id: Category; label: string }[] = [
 
 export const PROJECTS: Project[] = [
   {
-    id: 'agent-dojo',
-    name: 'Agent_Dojo',
-    displayName: 'Agent Dojo',
+    id: 'epstein-graphrag',
+    name: 'Epstein-graphrag',
+    displayName: 'Epstein GraphRAG',
     description:
-      'AI agent orchestration framework combining CrewAI concepts with LangGraph workflows. Features a drag-and-drop visual canvas, real-time collaboration, Langfuse observability, Composio integrations, and MCP tool support.',
-    category: 'ai-agents',
-    tags: ['Python', 'TypeScript', 'FastAPI', 'React', 'LangGraph', 'PostgreSQL'],
-    github: 'https://github.com/jkear/Agent_Dojo',
+      'GraphRAG pipeline for 850K+ Epstein case evidence files. 4-stage: classify → OCR → extract → ingest. Vision models (Qwen2-VL) for 11% requiring OCR, Neo4j knowledge graph with 18 entity types including Person, Aircraft, and Property.',
+    category: 'data-graph',
+    tags: ['Python', 'Neo4j', 'vLLM', 'Qwen2-VL', 'Pydantic'],
+    github: 'https://github.com/jkear/Epstein-graphrag',
     featured: true,
     status: 'active',
-    accent: '#38bdf8',
+    accent: '#f87171',
+  },
+  {
+    id: 'fec-data-graph',
+    name: 'FEC-data-and-HR1-199-graph',
+    displayName: 'Federal Election Dark Money Trace',
+    description:
+      'FEC campaign finance analysis via Neo4j. Relationship mapping between candidates, committees, and transactions. Interactive Streamlit dashboard with pre-built Cypher queries for anomaly detection and compliance monitoring.',
+    category: 'data-graph',
+    tags: ['Python', 'Neo4j', 'Streamlit', 'pandas', 'networkx'],
+    github: 'https://github.com/jkear/FEC-data-and-HR1-199-neo4j-dump',
+    status: 'stable',
+    accent: '#facc15',
   },
   {
     id: 'backflip-bdr',
     name: 'backflip-bdr',
-    displayName: 'Backflip BDR',
+    displayName: 'Lead Research to Meeting Pipeline',
     description:
       'Autonomous multi-agent pipeline: B2B lead discovery → qualification → email outreach → meeting booking. Uses Exa semantic search, ElevenLabs voice, and Google Calendar. Explicit call-gate — no voice contact without written permission.',
     category: 'ai-agents',
@@ -76,17 +88,16 @@ export const PROJECTS: Project[] = [
     accent: '#c084fc',
   },
   {
-    id: 'epstein-graphrag',
-    name: 'Epstein-graphrag',
-    displayName: 'Epstein GraphRAG',
+    id: 'pdf-textsplitter',
+    name: 'pdf-textsplitter-for-TTS',
+    displayName: 'PDF Text Splitter for TTS',
     description:
-      'GraphRAG pipeline for 850K+ Epstein case evidence files. 4-stage: classify → OCR → extract → ingest. Vision models (Qwen2-VL) for 11% requiring OCR, Neo4j knowledge graph with 18 entity types including Person, Aircraft, and Property.',
-    category: 'data-graph',
-    tags: ['Python', 'Neo4j', 'vLLM', 'Qwen2-VL', 'Pydantic'],
-    github: 'https://github.com/jkear/Epstein-graphrag',
-    featured: true,
-    status: 'active',
-    accent: '#f87171',
+      'Extracts and chunks PDF text optimised for OpenAI TTS pipelines. Uses pdfplumber as primary backend with PyPDF2 fallback for broader format support.',
+    category: 'mcp-tools',
+    tags: ['Python', 'pdfplumber', 'PyPDF2', 'TTS'],
+    github: 'https://github.com/jkear/pdf-textsplitter-for-TTS',
+    status: 'stable',
+    accent: '#f472b6',
   },
   {
     id: 'historical-mirror',
@@ -113,18 +124,6 @@ export const PROJECTS: Project[] = [
     accent: '#60a5fa',
   },
   {
-    id: 'fec-data-graph',
-    name: 'FEC-data-and-HR1-199-graph',
-    displayName: 'FEC Campaign Finance Graph',
-    description:
-      'FEC campaign finance analysis via Neo4j. Relationship mapping between candidates, committees, and transactions. Interactive Streamlit dashboard with pre-built Cypher queries for anomaly detection and compliance monitoring.',
-    category: 'data-graph',
-    tags: ['Python', 'Neo4j', 'Streamlit', 'pandas', 'networkx'],
-    github: 'https://github.com/jkear/FEC-data-and-HR1-199-neo4j-dump',
-    status: 'stable',
-    accent: '#facc15',
-  },
-  {
     id: 'swift-historical-mirror',
     name: 'Swift_Historical-Mirror',
     displayName: 'Historical Mirror for macOS',
@@ -149,18 +148,6 @@ export const PROJECTS: Project[] = [
     accent: '#fb923c',
   },
   {
-    id: 'pdf-textsplitter',
-    name: 'pdf-textsplitter-for-TTS',
-    displayName: 'PDF Text Splitter for TTS',
-    description:
-      'Extracts and chunks PDF text optimised for OpenAI TTS pipelines. Uses pdfplumber as primary backend with PyPDF2 fallback for broader format support.',
-    category: 'mcp-tools',
-    tags: ['Python', 'pdfplumber', 'PyPDF2', 'TTS'],
-    github: 'https://github.com/jkear/pdf-textsplitter-for-TTS',
-    status: 'stable',
-    accent: '#f472b6',
-  },
-  {
     id: 'youswine-website',
     name: 'youswine-website',
     displayName: 'You Swine',
@@ -170,5 +157,18 @@ export const PROJECTS: Project[] = [
     github: 'https://github.com/jkear/youswine-website',
     status: 'stable',
     accent: '#4ade80',
+  },
+  {
+    id: 'agent-dojo',
+    name: 'Agent_Dojo',
+    displayName: 'Agent Dojo',
+    description:
+      'AI agent orchestration framework combining CrewAI concepts with LangGraph workflows. Features a drag-and-drop visual canvas, real-time collaboration, Langfuse observability, Composio integrations, and MCP tool support.',
+    category: 'ai-agents',
+    tags: ['Python', 'TypeScript', 'FastAPI', 'React', 'LangGraph', 'PostgreSQL'],
+    github: 'https://github.com/jkear/Agent_Dojo',
+    featured: true,
+    status: 'wip',
+    accent: '#38bdf8',
   },
 ]
