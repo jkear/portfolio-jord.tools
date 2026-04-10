@@ -6,7 +6,7 @@ const THEMES: Record<Theme, { name: string; short: string; accent: string; textO
   dark:      { name: 'OLED Dark',  short: 'DARK', accent: '#00D2A0', textOnAccent: '#000000' },
   light:     { name: 'Swiss Light', short: 'LITE', accent: '#2563EB', textOnAccent: '#FFFFFF' },
   editorial: { name: 'Editorial',   short: 'EDIT', accent: '#7C3AED', textOnAccent: '#FFFFFF' },
-  anthropic: { name: 'Anthropic',   short: 'ANT',  accent: '#E8602D', textOnAccent: '#FFFFFF' },
+  anthropic: { name: 'Anthropic',   short: 'ANT',  accent: '#CB7B5D', textOnAccent: '#FFFFFF' },
 }
 
 // D-pad direction → theme

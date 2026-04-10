@@ -105,32 +105,32 @@
 
 /* ── Anthropic ── */
 [data-theme="anthropic"] {
-  --bg: #1A1310;
-  --bg-card: rgba(42, 32, 26, 0.80);
-  --bg-card-hover: rgba(54, 41, 33, 0.88);
-  --bg-nav: rgba(22, 17, 14, 0.92);
-  --bg-hover: rgba(232, 96, 45, 0.07);
-  --bg-accent-subtle: rgba(232, 96, 45, 0.13);
+  --bg: #1F1F1E;
+  --bg-card: rgba(44, 44, 43, 0.85);
+  --bg-card-hover: rgba(54, 54, 52, 0.92);
+  --bg-nav: rgba(31, 31, 30, 0.94);
+  --bg-hover: rgba(203, 123, 93, 0.08);
+  --bg-accent-subtle: rgba(203, 123, 93, 0.14);
 
-  --border: rgba(255, 230, 200, 0.10);
-  --border-hover: rgba(232, 96, 45, 0.42);
+  --border: rgba(237, 237, 235, 0.10);
+  --border-hover: rgba(203, 123, 93, 0.40);
 
-  --primary: #E8602D;
-  --primary-glow: rgba(232, 96, 45, 0.20);
+  --primary: #CB7B5D;
+  --primary-glow: rgba(203, 123, 93, 0.20);
   --green: #4ADE80;
   --green-dim: rgba(74, 222, 128, 0.12);
   --amber: #F59E0B;
   --purple: #C084FC;
 
-  --text: #FAF0E4;
-  --text-muted: #C8A882;
-  --text-subtle: #7A5C46;
-  --tag-text: rgba(250, 240, 228, 0.68);
+  --text: #EDEDEB;
+  --text-muted: #C3C2B8;
+  --text-subtle: #6B6B67;
+  --tag-text: rgba(237, 237, 235, 0.68);
 
-  --status-active-bg: rgba(232, 96, 45, 0.16);
-  --status-active-text: #E8602D;
-  --status-stable-bg: rgba(255, 230, 200, 0.07);
-  --status-stable-text: rgba(250, 240, 228, 0.40);
+  --status-active-bg: rgba(203, 123, 93, 0.16);
+  --status-active-text: #CB7B5D;
+  --status-stable-bg: rgba(237, 237, 235, 0.07);
+  --status-stable-text: rgba(237, 237, 235, 0.38);
 
   --radius: 0.75rem;
   --radius-sm: 0.5rem;
@@ -254,9 +254,9 @@
   }
   [data-theme="anthropic"] .glow-card-hover {
     box-shadow:
-      0 0 0 1px rgba(232, 96, 45, 0.30),
+      0 0 0 1px rgba(203, 123, 93, 0.28),
       0 8px 32px rgba(0, 0, 0, 0.55),
-      0 4px 16px rgba(232, 96, 45, 0.10);
+      0 4px 16px rgba(203, 123, 93, 0.10);
   }
 
   /* ── Text gradient: aurora for dark, warm for anthropic, solid for others ── */
@@ -268,7 +268,7 @@
   }
 
   [data-theme="anthropic"] .text-gradient {
-    background: linear-gradient(135deg, #E8602D 0%, #F5A623 60%, #E8602D 100%);
+    background: linear-gradient(135deg, #CB7B5D 0%, #E0A882 60%, #CB7B5D 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -291,9 +291,9 @@
     border-color: var(--border) !important;
   }
   [data-theme="anthropic"] .proj-tag {
-    background: rgba(232, 96, 45, 0.08) !important;
+    background: rgba(203, 123, 93, 0.08) !important;
     color: var(--tag-text) !important;
-    border-color: rgba(232, 96, 45, 0.18) !important;
+    border-color: rgba(203, 123, 93, 0.18) !important;
   }
 }
 
